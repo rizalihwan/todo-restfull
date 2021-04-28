@@ -10,8 +10,8 @@ class TodoController extends Controller
 {
     public function index()
     {
-        $todo = Todo::latest()->get();
-        return TodoResource::collection($todo);
+        $todos = Todo::latest()->get();
+        return TodoResource::collection($todos);
     }
 
     public function store()
